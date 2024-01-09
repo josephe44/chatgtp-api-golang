@@ -26,9 +26,9 @@ func StartServer() {
 }
 
 func handleChatRequest(c *gin.Context) {
-	apiKey := os.Getenv("API_KEY")
+	apiKey := os.Getenv("RENDER_API_KEY")
 	if apiKey == "" {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "OPENAI_API_KEY not set"})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "RENDER_API_KEY not set"})
 		return
 	}
 

@@ -14,5 +14,5 @@ func LoadEnvVariables() {
 		log.Fatal("Error loading .env file")
 	}
 	// Load environment variables if needed
-	os.Getenv("API_KEY")
+	os.Getenv("RENDER_API_KEY")
 }
